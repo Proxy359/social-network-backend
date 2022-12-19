@@ -6,9 +6,9 @@ import (
 )
 
 type Massage struct {
-	AuthorID           int
-	MassageDescriprion string
-	SendingTime        time.Time
+	AuthorID           int        `json:"author_id"`
+	MassageDescriprion string     `json:"massage_descriprion"`
+	SendingTime        time.Time  `json:"sending_time"`
 }
 
 func (u *TaskStorage) WriteMessage(userInfo FullUserInfo) error {
