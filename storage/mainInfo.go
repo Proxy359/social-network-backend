@@ -6,13 +6,13 @@ import (
 )
 
 type MainInfo struct {
-	Name         string
-	LastName     string
-	Sex          string
-	FamilyStatus string
-	Birthday     [3]int
-	City         string
-	Uncles       []int
+	Name         string  `json:"name"`
+	LastName     string  `json:"last_name"`
+	Sex          string  `json:"sex"`
+	FamilyStatus string  `json:"family_status"`
+	Birthday     [3]int  `json:"birthday"`
+	City         string  `json:"city"`
+	Uncles       []int  `json:"uncles"`
 }
 
 type TaskStorage struct {
