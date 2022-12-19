@@ -6,10 +6,10 @@ import (
 )
 
 type FullUserInfo struct {
-	SomeLogInfo  LogInfo
-	SomeMainInfo MainInfo
-	FriendsList  []int
-	ChatList     map[int][]Massage
+	SomeLogInfo  LogInfo             `json:"some_log_info"`
+	SomeMainInfo MainInfo            `json:"some_main_info"`
+	FriendsList  []int               `json:"friends_list"`
+	ChatList     map[int][]Massage   `json:"chat_list"`
 }
 
 type UserStorage struct {
@@ -17,9 +17,9 @@ type UserStorage struct {
 }
 
 type LogInfo struct {
-	email    string
-	password string
-	userID   int
+	email    string  `json:"email"`
+	password string  `json:"password"`
+	userID   int     `json:"user_id"`
 }
 
 func (u *UserStorage) CreateUser(userInfo FullUserInfo) error {
